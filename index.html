@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KES Updatess</title>
-
+<title>KES Updatess & Junior College Fees</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
 *{
 margin:0;
@@ -131,24 +129,41 @@ cursor:pointer;
 }
 
 /* TABLE */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top:10px;
+.fee-table-container {
+    background:white;
+    color:black;
+    padding:20px;
+    border-radius:12px;
 }
 
-table, th, td {
-  border: 1px solid rgba(255,255,255,0.3);
+.fee-table-container h2 {
+    text-align:center;
+    margin-bottom:20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
 th, td {
-  padding: 8px;
-  text-align: left;
-  color: white;
+    border: 1px solid black;
+    padding: 8px;
+    vertical-align: middle;
 }
 
 th {
-  background: rgba(255,255,255,0.1);
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+td.particulars {
+    text-align: center;
+    font-weight: bold;
+}
+
+td.fees {
+    text-align: right;
 }
 
 /* FOOTER */
@@ -160,7 +175,6 @@ font-size:13px;
 }
 </style>
 </head>
-
 <body>
 
 <!-- MENU -->
@@ -216,52 +230,52 @@ target="_blank">
 <p>KES Updatess is a student-run platform for notices and updates.</p>
 </div>
 
-<!-- KES Junior College Fees Table -->
-<div class="card">
-  <h2>💰 KES Junior College Fees & Cutoff (Academic Year 2026-27)</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Sr. No</th>
-        <th>Particulars</th>
-        <th>Subject</th>
-        <th>Fees (₹)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>1</td><td>FYJC AIDED</td><td>HINDI/SP</td><td>7,590</td></tr>
-      <tr><td>2</td><td>FYJC AIDED</td><td>HINDI/MATHS</td><td>11,615</td></tr>
-      <tr><td>3</td><td>FYJC AIDED</td><td>IT/MATHS</td><td>26,643</td></tr>
-      <tr><td>4</td><td>FYJC AIDED</td><td>HINDI/SP</td><td>36,340</td></tr>
-      <tr><td>5</td><td>FYJC AIDED</td><td>GUJ/SP</td><td>36,341</td></tr>
-      <tr><td>6</td><td>FYJC AIDED</td><td>HINDI/MATHS</td><td>43,651</td></tr>
-      <tr><td>7</td><td>FYJC AIDED</td><td>GUJ/MATHS</td><td>40,366</td></tr>
-      <tr><td>8</td><td>FYJC AIDED</td><td>IT/SP</td><td>51,384</td></tr>
+<!-- Fee Table Section -->
+<div class="card fee-table-container">
+<h2>KES Junior College Fees & Cutoff (Academic Year 2026-27)</h2>
+<table>
+<thead>
+<tr>
+<th>Sr. No.</th>
+<th>Particulars</th>
+<th>Subject</th>
+<th>Fees</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td rowspan="7" class="particulars">FYJC AIDED</td><td>HINDI/SP</td><td class="fees">7590/-</td></tr>
+<tr><td>2</td><td>HINDI/MATHS</td><td class="fees">11615/-</td></tr>
+<tr><td>3</td><td>IT/MATHS</td><td class="fees">26643/-</td></tr>
+<tr><td>4</td><td>HINDI/SP</td><td class="fees">36340/-</td></tr>
+<tr><td>5</td><td>GUJ/SP</td><td class="fees">36341/-</td></tr>
+<tr><td>6</td><td>HINDI/MATHS</td><td class="fees">40365/-</td></tr>
+<tr><td>7</td><td>GUJ/MATHS</td><td class="fees">40366/-</td></tr>
 
-      <tr><td>9</td><td>FYJC UNAIDED</td><td>IT/MATHS</td><td>55,394</td></tr>
-      <tr><td>10</td><td>FYJC UNAIDED</td><td>FRENCH/SP</td><td>45,594</td></tr>
-      <tr><td>11</td><td>FYJC UNAIDED</td><td>FRENCH/MATHS</td><td>49,619</td></tr>
-      <tr><td>12</td><td>FYJC UNAIDED</td><td>BANKING/SP</td><td>55,180</td></tr>
-      <tr><td>13</td><td>FYJC UNAIDED</td><td>BANKING/MATHS</td><td>59,205</td></tr>
-      <tr><td>14</td><td>FYJC UNAIDED</td><td>MARKETING/SP</td><td>55,182</td></tr>
-      <tr><td>15</td><td>FYJC UNAIDED</td><td>MARKETING/MATHS</td><td>59,207</td></tr>
-      <tr><td>16</td><td>FYJC UNAIDED</td><td>HINDI/GEO/HIS</td><td>23,438</td></tr>
-      <tr><td>17</td><td>FYJC UNAIDED</td><td>IT/GEO/HIS</td><td>38,336</td></tr>
-      <tr><td>18</td><td>FYJC UNAIDED</td><td>HINDI/MATHS/HIS</td><td>27,428</td></tr>
-      <tr><td>19</td><td>FYJC UNAIDED</td><td>GUJ/MATHS/HIS</td><td>27,430</td></tr>
-      <tr><td>20</td><td>FYJC UNAIDED</td><td>IT/MATHS/HIS</td><td>42,326</td></tr>
-      <tr><td>21</td><td>FYJC UNAIDED</td><td>IT/GEO/PSY</td><td>42,881</td></tr>
-      <tr><td>22</td><td>FYJC UNAIDED</td><td>HINDI/GEO/PSY</td><td>27,984</td></tr>
-      <tr><td>23</td><td>FYJC UNAIDED</td><td>IT/MATHS/PSY</td><td>46,871</td></tr>
-      <tr><td>24</td><td>FYJC UNAIDED</td><td>HINDI/MATHS/PSY</td><td>31,974</td></tr>
-      <tr><td>25</td><td>FYJC UNAIDED</td><td>GUJ/GEO/PSY</td><td>27,984</td></tr>
-      <tr><td>26</td><td>FYJC UNAIDED</td><td>FRENCH/GEO/PSY</td><td>37,157</td></tr>
-      <tr><td>27</td><td>FYJC UNAIDED</td><td>FRENCH/MATHS/PSY</td><td>41,147</td></tr>
-      <tr><td>28</td><td>FYJC UNAIDED</td><td>FRENCH/GEO/HIS</td><td>32,612</td></tr>
-      <tr><td>29</td><td>FYJC UNAIDED</td><td>FRENCH/MATHS/HIS</td><td>36,602</td></tr>
-    </tbody>
-  </table>
-  <p style="margin-top:10px; font-style:italic;">*Cutoff details will be updated separately when released by KES Junior College.*</p>
+<tr><td>8</td><td rowspan="8" class="particulars">FYJC UNAIDED</td><td>IT/SP</td><td class="fees">51368/-</td></tr>
+<tr><td>9</td><td>IT/MATHS</td><td class="fees">55393/-</td></tr>
+<tr><td>10</td><td>FRENCH/SP</td><td class="fees">45594/-</td></tr>
+<tr><td>11</td><td>FRENCH/MATHS</td><td class="fees">49610/-</td></tr>
+<tr><td>12</td><td>BANKING/SP</td><td class="fees">55180/-</td></tr>
+<tr><td>13</td><td>BANKING/MATHS</td><td class="fees">59205/-</td></tr>
+<tr><td>14</td><td>MARKETING/SP</td><td class="fees">55182/-</td></tr>
+<tr><td>15</td><td>MARKETING/MATHS</td><td class="fees">59207/-</td></tr>
+
+<tr><td>16</td><td rowspan="14" class="particulars">FYJC ARTS</td><td>HINDI/GEO/HIS</td><td class="fees">23438/-</td></tr>
+<tr><td>17</td><td>IT/GEO/HIS</td><td class="fees">38336/-</td></tr>
+<tr><td>18</td><td>HINDI/MATHS/HIS</td><td class="fees">27428/-</td></tr>
+<tr><td>19</td><td>GUJ/MATHS/HIS</td><td class="fees">27430/-</td></tr>
+<tr><td>20</td><td>IT/MATHS/HIS</td><td class="fees">42326/-</td></tr>
+<tr><td>21</td><td>IT/GEO/PSY</td><td class="fees">42881/-</td></tr>
+<tr><td>22</td><td>HINDI/GEO/PSY</td><td class="fees">27984/-</td></tr>
+<tr><td>23</td><td>IT/MATHS/PSY</td><td class="fees">46871/-</td></tr>
+<tr><td>24</td><td>HINDI/MATHS/PSY</td><td class="fees">31974/-</td></tr>
+<tr><td>25</td><td>GUJ/GEO/PSY</td><td class="fees">27984/-</td></tr>
+<tr><td>26</td><td>FRENCH/GEO/PSY</td><td class="fees">37157/-</td></tr>
+<tr><td>27</td><td>FRENCH/MATHS/PSY</td><td class="fees">41147/-</td></tr>
+<tr><td>28</td><td>FRENCH/GEO/HIS</td><td class="fees">32612/-</td></tr>
+<tr><td>29</td><td>FRENCH/MATHS/HIS</td><td class="fees">36602/-</td></tr>
+</tbody>
+</table>
 </div>
 
 </div>

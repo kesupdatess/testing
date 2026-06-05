@@ -3,184 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KES Updatess & College Fees</title>
+<title>KES Updatess – Student Platform</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+body {
+  font-family: 'Poppins', sans-serif;
+  margin:0;
+  background:radial-gradient(circle at top,#2563eb,transparent 40%), radial-gradient(circle at bottom,#3b82f6,transparent 40%), #0f172a;
+  color:white;
+  min-height:100vh;
+  transition:0.3s;
 }
 
-/* THEMES */
-body{
-background:radial-gradient(circle at top,#2563eb,transparent 40%),
-radial-gradient(circle at bottom,#7c3aed,transparent 40%),
-#0f172a;
-color:white;
-min-height:100vh;
-transition:0.3s;
-}
-
-body.light{
-background:white;
-color:black;
-}
-
-body.contrast{
-background:black;
-color:yellow;
-font-weight:600;
-}
+body.light{background:white; color:black;}
+body.contrast{background:black;color:yellow;font-weight:600;}
 
 /* HEADER */
-header{
-text-align:center;
-padding:60px 20px 30px;
-}
-
-.logo{
-font-size:50px;
-}
+header{text-align:center;padding:50px 20px 20px;}
+.logo{font-size:50px;}
+.header-tagline{margin-top:5px;font-size:16px; opacity:0.85;}
 
 /* CARDS */
-.container{
-max-width:1000px;
-margin:auto;
-padding:20px;
-}
+.container{max-width:1000px;margin:auto;padding:20px;}
+.card{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);backdrop-filter:blur(15px);padding:20px;border-radius:16px;margin-bottom:20px;}
+.card h2{margin-bottom:10px;}
 
-.card{
-background:rgba(255,255,255,0.08);
-border:1px solid rgba(255,255,255,0.15);
-backdrop-filter:blur(15px);
-padding:18px;
-border-radius:16px;
-margin-bottom:15px;
-}
-
-/* LINKS */
-.link, .btn{
-display:block;
-padding:12px;
-margin-top:10px;
-border-radius:10px;
-text-align:center;
-text-decoration:none;
-font-weight:600;
-}
-
-.link{
-background:white;
-color:#2563eb;
-}
-
-.btn{
-background:linear-gradient(135deg,#2563eb,#3b82f6);
-color:white;
-}
-
-/* ACTION BUTTONS */
-.action-btn{
-display:block;
-padding:12px;
-margin-top:10px;
-border-radius:10px;
-text-align:center;
-font-weight:600;
-text-decoration:none;
-color:white;
-}
-
+/* LINKS AND BUTTONS */
+.link,.btn,.action-btn{display:block;padding:12px;margin-top:10px;border-radius:10px;text-align:center;text-decoration:none;font-weight:600;}
+.link{background:white;color:#2563eb;}
+.btn{background:#2563eb;color:white;} /* System color style for Instagram button */
+.action-btn{color:white;}
 .meme{background:#7c3aed;}
 .doubt{background:#22c55e;}
 .report{background:#ef4444;}
-
-/* MENU */
-.menu{
-position:fixed;
-top:15px;
-right:15px;
-font-size:26px;
-cursor:pointer;
-z-index:999;
-}
-
-.panel{
-position:fixed;
-top:55px;
-right:15px;
-background:#111827;
-padding:15px;
-border-radius:12px;
-display:none;
-flex-direction:column;
-gap:10px;
-z-index:999;
-}
-
-.panel button{
-padding:10px;
-border:none;
-border-radius:8px;
-font-weight:600;
-cursor:pointer;
-}
+.menu{position:fixed;top:15px;right:15px;font-size:26px;cursor:pointer;z-index:999;}
+.panel{position:fixed;top:55px;right:15px;background:#111827;padding:15px;border-radius:12px;display:none;flex-direction:column;gap:10px;z-index:999;}
+.panel button{padding:10px;border:none;border-radius:8px;font-weight:600;cursor:pointer;}
 
 /* TABLE STYLING */
-.fee-table-container {
-    background:white;
-    color:black;
-    padding:20px;
-    border-radius:12px;
-    overflow-x:auto;
-}
-
-.fee-table-container h2 {
-    text-align:center;
-    margin-bottom:20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    vertical-align: middle;
-}
-
-th {
-    background-color: #f0f0f0;
-    text-align: center;
-}
-
-td.particulars {
-    text-align: center;
-    font-weight: bold;
-}
-
-td.fees, td["1st"], td["2nd"], td["scholarship"] {
-    text-align: right;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:20px;
-opacity:0.7;
-font-size:13px;
-}
-
-/* Responsive adjustments */
-@media(max-width: 768px) {
-    td, th {
-        font-size: 14px;
-    }
-}
+table{width:100%;border-collapse:collapse;margin-top:10px;}
+th,td{border:1px solid black;padding:8px;vertical-align:middle;color:black;}
+th{text-align:center;background:#f0f0f0;}
+td.particulars{text-align:center;font-weight:bold;}
+td.fees{text-align:right;}
+.fee-table-container{background:white;color:black;padding:20px;border-radius:12px;overflow-x:auto;}
+@media(max-width:768px){td,th{font-size:14px;}}
+footer{text-align:center;padding:20px;opacity:0.7;font-size:13px;}
 </style>
 </head>
 <body>
@@ -188,58 +56,48 @@ font-size:13px;
 <!-- MENU -->
 <div class="menu" onclick="togglePanel()">⋮</div>
 <div class="panel" id="panel">
-<button onclick="setTheme('light')">☀️ Light</button>
-<button onclick="setTheme('dark')">🌙 Dark</button>
-<button onclick="setTheme('contrast')">⚡ High Contrast</button>
+  <button onclick="setTheme('light')">☀️ Light</button>
+  <button onclick="setTheme('dark')">🌙 Dark</button>
+  <button onclick="setTheme('contrast')">⚡ High Contrast</button>
 </div>
 
 <header>
 <div class="logo">🎓</div>
-<h1>KES Updatess</h1>
-<p>Notices • Student Support • Collaborations</p>
+<h1>KES Updates</h1>
+<div class="header-tagline">Notices • Student Support • Collaborations</div>
 <a class="btn" href="https://instagram.com/kes_updatess" target="_blank">📸 Follow Instagram</a>
 </header>
 
 <div class="container">
 
-<!-- Notices -->
+<!-- Notices Section -->
 <div class="card">
-<h2>📢 Important Notices</h2>
+<h2>📢 Notices</h2>
 <a class="link" href="https://kessc.edu.in/notices/" target="_blank">Degree College Notices</a>
 <a class="link" href="https://kesjrsanghvi.com/enotices/" target="_blank">Junior College Notices</a>
 </div>
 
-<!-- Student Corner -->
+<!-- Student Corner Section -->
 <div class="card">
 <h2>🧑‍🎓 Student Corner</h2>
 <a class="action-btn meme" href="https://forms.gle/USmraK6T7EqH7UU9A" target="_blank">😂 Submit Meme</a>
-<a class="action-btn doubt" href="mailto:kesupdatess@gmail.com?subject=Ask%20Doubt%20-%20KES%20Updatess">❓ Ask Doubt</a>
-<a class="action-btn report" href="https://docs.google.com/forms/d/e/1FAIpQLSdpkELaLHjghZzWYR6EPYotuRvRDa3yQq3r5y2EHkRqrQOG8g/viewform" target="_blank">🚨 Report Problem</a>
+<a class="action-btn doubt" href="mailto:kesupdatess@gmail.com?subject=Ask%20Question%20-%20KES%20Updatess">❓ Ask a Question</a>
+<a class="action-btn report" href="https://docs.google.com/forms/d/e/1FAIpQLSdpkELaLHjghZzWYR6EPYotuRvRDa3yQq3r5y2EHkRqrQOG8g/viewform" target="_blank">🚨 Report any issue you are facing in college</a>
 </div>
 
-<!-- Collaboration -->
+<!-- Collaboration Section -->
 <div class="card">
 <h2>🤝 Collaboration</h2>
-<a class="link" href="mailto:kesupdatess@gmail.com">kesupdatess@gmail.com</a>
+<p>Paid partnerships, sponsorships, and student engagement campaigns.</p>
+<a class="btn" href="mailto:kesupdatess@gmail.com" target="_blank">Email us for collaboration</a>
 </div>
 
-<!-- About -->
-<div class="card">
-<h2>ℹ️ About</h2>
-<p>KES Updatess is a student-run platform for notices and updates.</p>
-</div>
-
-<!-- Junior College Fees Table -->
+<!-- Junior College Fees -->
 <div class="card fee-table-container">
-<h2>KES Junior College Fees & Cutoff (Academic Year 2026-27)</h2>
+<h2>Junior College Fees</h2>
 <table>
 <thead>
-<tr>
-<th>Sr. No.</th>
-<th>Particulars</th>
-<th>Subject</th>
-<th>Fees</th>
-</tr>
+<tr><th>Sr. No.</th><th>Particulars</th><th>Subject</th><th>Fees</th></tr>
 </thead>
 <tbody>
 <tr><td>1</td><td rowspan="7" class="particulars">FYJC AIDED</td><td>HINDI/SP</td><td class="fees">7590/-</td></tr>
@@ -275,19 +133,12 @@ font-size:13px;
 </table>
 </div>
 
-<!-- Degree College Fees Table -->
+<!-- Degree College Fees -->
 <div class="card fee-table-container">
-<h2>Degree College Fees (First Year - Self Finance, Academic Year 2026-27)</h2>
+<h2>Degree College Fees</h2>
 <table>
 <thead>
-<tr>
-<th>Sr. No.</th>
-<th>Programmes</th>
-<th>First Year Fees (₹)</th>
-<th>1st Installment</th>
-<th>2nd Installment</th>
-<th>Scholarship/No Installment</th>
-</tr>
+<tr><th>Sr. No.</th><th>Programmes</th><th>First Year Fees (₹)</th><th>1st Installment</th><th>2nd Installment</th><th>Scholarship/No Installment</th></tr>
 </thead>
 <tbody>
 <tr><td>1</td><td>B.Com (Aided)</td><td>19140</td><td>NO INSTALLMENT</td><td>—</td><td>17140</td></tr>
@@ -320,8 +171,6 @@ font-size:13px;
 </table>
 </div>
 
-</div>
-
 <footer>
 © 2026 KES Updatess
 </footer>
@@ -340,6 +189,5 @@ let saved=localStorage.getItem("theme");
 if(saved) setTheme(saved);
 }
 </script>
-
 </body>
 </html>

@@ -1,355 +1,210 @@
-<!DOCTYPE html> 
-
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>KES Updatess</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
-
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
-
-
 body{
-
 background:radial-gradient(circle at top,#2563eb,transparent 40%),
-
 radial-gradient(circle at bottom,#3b82f6,transparent 40%),
-
 #0f172a;
-
 color:white;
-
 min-height:100vh;
-
 transition:0.3s;
-
 }
-
-
-
 body.light{background:white;color:black;}
-
 body.contrast{background:black;color:yellow;font-weight:600;}
-
-
-
 header{text-align:center;padding:60px 20px 30px;}
-
 .logo{font-size:50px;}
-
 .header-tagline{margin:10px 0;font-size:16px;}
-
-
-
 .container{max-width:1000px;margin:auto;padding:20px;}
-
-
-
 .card{
-
 background:rgba(255,255,255,0.08);
-
 border:1px solid rgba(255,255,255,0.15);
-
 backdrop-filter:blur(15px);
-
 padding:18px;
-
 border-radius:16px;
-
 margin-bottom:15px;
-
 }
-
-
-
 .link,.btn,.action-btn{
-
 display:block;
-
 padding:12px;
-
 margin-top:10px;
-
 border-radius:10px;
-
 text-align:center;
-
 text-decoration:none;
-
 font-weight:600;
-
 }
-
-
-
 .link{background:white;color:#2563eb;}
-
 .btn{background:linear-gradient(135deg,#2563eb,#3b82f6);color:white;}
-
 .action-btn{color:white;}
-
 .meme{background:#7c3aed;}
-
 .doubt{background:#22c55e;}
-
 .report{background:#ef4444;}
-
-
-
 .fee-table-container{background:white;color:black;padding:20px;border-radius:12px;overflow-x:auto;margin-bottom:20px;}
-
 table{width:100%;border-collapse:collapse;margin-top:10px;}
-
 th,td{border:1px solid black;padding:8px;vertical-align:middle;color:black;}
-
 th{text-align:center;background:#f0f0f0;}
-
 td.particulars{text-align:center;font-weight:bold;}
-
 td.fees{text-align:right;}
-
-
-
+.cutoff-card{
+background:white;
+color:black;
+padding:20px;
+border-radius:12px;
+margin-bottom:20px;
+border:2px solid black;
+}
+.cutoff-card h3{text-align:left;margin-bottom:10px;font-weight:bold;}
+.cutoff-card th, .cutoff-card td{border:1px solid black;padding:8px;text-align:center;}
+.cutoff-card th{background:#e0e0e0;}
 footer{text-align:center;padding:20px;opacity:0.7;font-size:13px;}
-
 </style>
-
 </head>
-
 <body>
 
-
-
 <header>
-
 <div class="logo">🎓</div>
-
 <h1>KES Updatess</h1>
-
 <p class="header-tagline">Notices • Student Support • Collaborations</p>
-
 <a class="btn" href="https://instagram.com/kes_updatess" target="_blank">📸 Follow Instagram</a>
-
 </header>
-
-
 
 <div class="container">
 
-
-
 <!-- Notices -->
-
 <div class="card" id="notices">
-
 <h2>📢 Important Notices</h2>
-
 <a class="link" href="https://kessc.edu.in/notices/" target="_blank">Degree College Notices</a>
-
 <a class="link" href="https://kesjrsanghvi.com/enotices/" target="_blank">Junior College Notices</a>
-
 </div>
-
-
 
 <!-- Student Corner -->
-
 <div class="card" id="studentCorner">
-
 <h2>🧑‍🎓 Student Corner</h2>
-
 <a class="action-btn meme" href="https://forms.gle/USmraK6T7EqH7UU9A" target="_blank">😂 Submit Meme</a>
-
-<a class="action-btn doubt" href="mailto:kesupdatess@gmail.com?subject=Ask%20Doubt%20-%20KES%20Updatess">❓ Ask Doubt</a>
-
+<a class="action-btn doubt" href="mailto:kesupdatess@gmail.com?subject=Ask%20Doubt%20-%20KES Updatess">❓ Ask Doubt</a>
 <a class="action-btn report" href="https://docs.google.com/forms/d/e/1FAIpQLSdpkELaLHjghZzWYR6EPYotuRvRDa3yQq3r5y2EHkRqrQOG8g/viewform" target="_blank">🚨 Report Problem</a>
-
 </div>
-
-
 
 <!-- Collaboration -->
-
 <div class="card" id="collaboration">
-
 <h2>🤝 Collaboration</h2>
-
 <a class="link" href="mailto:kesupdatess@gmail.com">kesupdatess@gmail.com</a>
-
 </div>
-
-
 
 <!-- Junior College Fees -->
-
 <div class="card fee-table-container" id="juniorFees">
-
 <h2>Junior College Fees</h2>
-
 <table>
-
 <thead>
-
 <tr><th>Sr. No.</th><th>Particulars</th><th>Subject</th><th>Fees</th></tr>
-
 </thead>
-
 <tbody>
-
 <tr><td>1</td><td rowspan="7" class="particulars">FYJC AIDED</td><td>HINDI/SP</td><td class="fees">7590/-</td></tr>
-
 <tr><td>2</td><td>HINDI/MATHS</td><td class="fees">11615/-</td></tr>
-
 <tr><td>3</td><td>IT/MATHS</td><td class="fees">26643/-</td></tr>
-
 <tr><td>4</td><td>HINDI/SP</td><td class="fees">36340/-</td></tr>
-
 <tr><td>5</td><td>GUJ/SP</td><td class="fees">36341/-</td></tr>
-
 <tr><td>6</td><td>HINDI/MATHS</td><td class="fees">40365/-</td></tr>
-
 <tr><td>7</td><td>GUJ/MATHS</td><td class="fees">40366/-</td></tr>
-
 <tr><td>8</td><td rowspan="8" class="particulars">FYJC UNAIDED</td><td>IT/SP</td><td class="fees">51368/-</td></tr>
-
 <tr><td>9</td><td>IT/MATHS</td><td class="fees">55393/-</td></tr>
-
 <tr><td>10</td><td>FRENCH/SP</td><td class="fees">45594/-</td></tr>
-
 <tr><td>11</td><td>FRENCH/MATHS</td><td class="fees">49610/-</td></tr>
-
 <tr><td>12</td><td>BANKING/SP</td><td class="fees">55180/-</td></tr>
-
 <tr><td>13</td><td>BANKING/MATHS</td><td class="fees">59205/-</td></tr>
-
 <tr><td>14</td><td>MARKETING/SP</td><td class="fees">55182/-</td></tr>
-
 <tr><td>15</td><td>MARKETING/MATHS</td><td class="fees">59207/-</td></tr>
-
 <tr><td>16</td><td rowspan="14" class="particulars">FYJC ARTS</td><td>HINDI/GEO/HIS</td><td class="fees">23438/-</td></tr>
-
 <tr><td>17</td><td>IT/GEO/HIS</td><td class="fees">38336/-</td></tr>
-
 <tr><td>18</td><td>HINDI/MATHS/HIS</td><td class="fees">27428/-</td></tr>
-
 <tr><td>19</td><td>GUJ/MATHS/HIS</td><td class="fees">27430/-</td></tr>
-
 <tr><td>20</td><td>IT/MATHS/HIS</td><td class="fees">42326/-</td></tr>
-
 <tr><td>21</td><td>IT/GEO/PSY</td><td class="fees">42881/-</td></tr>
-
 <tr><td>22</td><td>HINDI/GEO/PSY</td><td class="fees">27984/-</td></tr>
-
 <tr><td>23</td><td>IT/MATHS/PSY</td><td class="fees">46871/-</td></tr>
-
 <tr><td>24</td><td>HINDI/MATHS/PSY</td><td class="fees">31974/-</td></tr>
-
 <tr><td>25</td><td>GUJ/GEO/PSY</td><td class="fees">27984/-</td></tr>
-
 <tr><td>26</td><td>FRENCH/GEO/PSY</td><td class="fees">37157/-</td></tr>
-
 <tr><td>27</td><td>FRENCH/MATHS/PSY</td><td class="fees">41147/-</td></tr>
-
 <tr><td>28</td><td>FRENCH/GEO/HIS</td><td class="fees">32612/-</td></tr>
-
 <tr><td>29</td><td>FRENCH/MATHS/HIS</td><td class="fees">36602/-</td></tr>
-
 </tbody>
-
 </table>
-
 </div>
-
-
 
 <!-- Degree College Fees -->
-
 <div class="card fee-table-container" id="degreeFees">
-
 <h2>Degree College Fees</h2>
-
 <table>
-
 <thead>
-
 <tr><th>Sr. No.</th><th>Programmes</th><th>First Year Fees (₹)</th><th>1st Installment</th><th>2nd Installment</th><th>Scholarship/No Installment</th></tr>
-
 </thead>
-
 <tbody>
-
 <tr><td>1</td><td>B.Com (Aided)</td><td>19140</td><td>NO INSTALLMENT</td><td>—</td><td>17140</td></tr>
-
 <tr><td>2</td><td>B.Com (Banking & Insurance)</td><td>47010</td><td>NO INSTALLMENT</td><td>—</td><td>24380</td></tr>
-
 <tr><td>3</td><td>B.Com (Investment Management)</td><td>48360</td><td>NO INSTALLMENT</td><td>—</td><td>NA</td></tr>
-
 <tr><td>4</td><td>B.Com (Logistic Supply Chain Management)</td><td>47365</td><td>NO INSTALLMENT</td><td>—</td><td>NA</td></tr>
-
 <tr><td>5</td><td>B.Com (Accounting & Finance)</td><td>48710</td><td>NO INSTALLMENT</td><td>—</td><td>27110</td></tr>
-
 <tr><td>6</td><td>B.Com (Financial Markets)</td><td>48610</td><td>NO INSTALLMENT</td><td>—</td><td>26460</td></tr>
-
 <tr><td>7</td><td>Bachelor of Arts (Multimedia & Mass)</td><td>48510</td><td>NO INSTALLMENT</td><td>—</td><td>25680</td></tr>
-
 <tr><td>8</td><td>B.A. with Geography</td><td>38640</td><td>NO INSTALLMENT</td><td>—</td><td>25440</td></tr>
-
 <tr><td>9</td><td>B.A. with Psychology</td><td>45640</td><td>NO INSTALLMENT</td><td>—</td><td>32440</td></tr>
-
 <tr><td>10</td><td>B.A. with English Lit</td><td>41640</td><td>NO INSTALLMENT</td><td>—</td><td>26440</td></tr>
-
 <tr><td>11</td><td>B.A. with Economics</td><td>39640</td><td>NO INSTALLMENT</td><td>—</td><td>26440</td></tr>
-
 <tr><td>12</td><td>B.Sc (Finance & Technology)</td><td>55380</td><td>NO INSTALLMENT</td><td>—</td><td>NA</td></tr>
-
 <tr><td>13</td><td>B.Com (Retail Management)</td><td>42130</td><td>NO INSTALLMENT</td><td>—</td><td>NA</td></tr>
-
 <tr><td>14</td><td>B.A. (Film, TV & New Media)</td><td>72210</td><td>42000</td><td>30210</td><td>NA</td></tr>
-
 <tr><td>15</td><td>B.Sc (Artificial Intelligence)</td><td>85510</td><td>55000</td><td>30510</td><td>NA</td></tr>
-
 <tr><td>16</td><td>B.Sc (Data Science)</td><td>75510</td><td>42000</td><td>33510</td><td>NA</td></tr>
-
 <tr><td>17</td><td>B.Sc (Information Technology)</td><td>53510</td><td>NO INSTALLMENT</td><td>—</td><td>33280</td></tr>
-
 <tr><td>18</td><td>B.Com (Certified Management Accounting)</td><td>93400</td><td>40000</td><td>13400</td><td>NA</td></tr>
-
 <tr><td>19</td><td>B.Com (Digital Business)</td><td>183480</td><td>43000</td><td>51080</td><td>58380</td></tr>
-
 <tr><td>20</td><td>B.Sc (International Finance)</td><td>153380</td><td>43000</td><td>30500</td><td>33800</td></tr>
-
 <tr><td>21</td><td>B.Sc Cyber Security & Digital Forensics</td><td>103040</td><td>42000</td><td>31300</td><td>29740</td></tr>
-
 <tr><td>22</td><td>B.Com (International Accounting)</td><td>139180</td><td>50000</td><td>45000</td><td>44180</td></tr>
-
 <tr><td>23</td><td>B.Sc (Capital Market)</td><td>103600</td><td>50000</td><td>40000</td><td>23600</td></tr>
-
 <tr><td>24</td><td>BMS - AICTE</td><td>49230</td><td>NO INSTALLMENT</td><td>—</td><td>27730</td></tr>
-
 <tr><td>25</td><td>BBA - AICTE</td><td>75270</td><td>43000</td><td>32230</td><td>31730</td></tr>
-
 <tr><td>26</td><td>BCA - AICTE</td><td>72730</td><td>43000</td><td>29730</td><td>31730</td></tr>
-
 </tbody>
+</table>
+</div>
 
+<!-- JUNIOR COLLEGE CUTOFF -->
+<div class="cutoff-card" id="juniorCutoff">
+<h2>📌 Junior College Cut-Offs</h2>
+
+<h3>FYJC – AIDED</h3>
+<table class="cutoff-table">
+<tr><th>Quota</th><th>Cut Off %</th></tr>
+<tr><td>Govt. Quota</td><td>85.00%</td></tr>
+<tr><td>Guj. Minority Quota</td><td>80.00%</td></tr>
+<tr><td>In-House Quota</td><td>72.00%</td></tr>
+</table>
+
+<h3>FYJC – UNAIDED (Self Finance)</h3>
+<table class="cutoff-table">
+<tr><th>Quota</th><th>Cut Off %</th></tr>
+<tr><td>Govt. Quota</td><td>70.00%</td></tr>
+<tr><td>Guj. Minority Quota</td><td>68.00%</td></tr>
+<tr><td>In-House Quota</td><td>-</td></tr>
+</table>
+
+<h3>FYJC – ARTS</h3>
+<table class="cutoff-table">
+<tr><th>Quota</th><th>Cut Off %</th></tr>
+<tr><td>Govt. Quota</td><td>70.00%</td></tr>
+<tr><td>Guj. Minority Quota</td><td>60.00%</td></tr>
+<tr><td>In-House Quota</td><td>-</td></tr>
 </table>
 
 </div>
 
-
-
 <footer>© 2026 KES Updatess</footer>
-
 </body>
-
 </html>

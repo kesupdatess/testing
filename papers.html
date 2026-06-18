@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Question Papers | KES Updates</title>
+<meta name="description" content="Previous year question papers for Junior, UG, PG, and AICTE courses.">
+<meta property="og:title" content="Question Papers | KES Updates">
+<meta property="og:description" content="Semester-wise previous year question papers for exam preparation and revision.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kesupdatess.github.io/kes-Updatess/">
+<meta property="og:image" content="https://kesupdatess.github.io/kes-Updatess/preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Question Papers | KES Updates">
+<meta name="twitter:description" content="Semester-wise previous year question papers for exam preparation and revision.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMenu();}" aria-label="Toggle Menu" aria-expanded="false" aria-controls="sidebar" role="button" tabindex="0">☰</div>
+<div class="theme-toggle">
+  <button id="btn-light" onclick="setTheme('light')" title="Light Mode">☀️</button>
+  <button id="btn-dark" onclick="setTheme('dark')" title="Dark Mode">🌙</button>
+</div>
+<div id="overlay" onclick="toggleMenu()"></div>
+<nav id="sidebar">
+  <a href="index.html" class="btn-blue">🏠 Home</a>
+  <a href="notices.html" class="btn-red">📢 Notices</a>
+  <a href="academic.html" class="btn-green">📚 Academic Info</a>
+  <a href="papers.html" class="btn-purple">📄 Question Papers</a>
+  <a href="erp.html" class="btn-orange">💳 ERP Portal</a>
+  <a href="library.html" class="btn-cyan">📚 Library</a>
+  <a href="attendance.html" class="btn-blue">🧮 Attendance Calculator</a>
+  <a href="college.html" class="btn-orange">🏛️ College Details</a>
+  <a href="student.html" class="btn-green">🧑‍🎓 Student Corner</a>
+  <a href="collab.html" class="btn-green">🤝 Collaboration</a>
+  <a href="about.html" class="btn-purple">ℹ️ About</a>
+  <a href="policy.html" class="btn-red">📄 Policy</a>
+</nav>
+<header>
+  <div class="logo">🎓</div>
+  <h1>KES Updates</h1>
+  <p>Notices • Student Support • Academic Resources</p>
+  <a class="btn btn-red instagram-btn" href="https://instagram.com/kes_updatess" target="_blank" rel="noopener noreferrer">
+    <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+      <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+    </svg>
+    <span>Follow Instagram</span>
+  </a>
+</header>
+
+<div class="container">
+  <div class="ticker-wrap">
+  <span class="ticker-label">🔴 LIVE</span>
+  <div class="ticker-inner">
+    <span class="ticker-text">
+      📢 Check latest notices on KES Updates &nbsp;|&nbsp;
+      💳 Pay your fees via ERP Portal &nbsp;|&nbsp;
+      📚 Academic Calendar 2026-27 is available &nbsp;|&nbsp;
+      📄 Previous Year Question Papers now available &nbsp;|&nbsp;
+      🤝 Want to collaborate? Email us at kesupdatess@gmail.com &nbsp;|&nbsp;
+      🎓 Welcome to KES Updates — your one-stop student portal!
+    </span>
+  </div>
+</div>
+
+  <div class="card reveal">
+    <h2>📄 Question Papers</h2>
+    <p>Semester-wise question papers for exam preparation and revision.</p>
+    <a class="link btn-purple" href="https://kessclibrary.wixsite.com/library/copy-of-question-papers" target="_blank" rel="noopener noreferrer">📝 All Question Papers (Library Portal)</a>
+    <ul class="erp-features">
+      <li>🏫 <a href="https://kessclibrary.wixsite.com/library/question-paper-junior" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">Junior Question Papers</a></li>
+      <li>🎓 <a href="https://kessclibrary.wixsite.com/library/question-paper-ug" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">UG Question Papers</a></li>
+      <li>📘 <a href="https://kessclibrary.wixsite.com/library/question-paper-pg" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">PG Question Papers</a></li>
+      <li>📗 <a href="https://kessclibrary.wixsite.com/library/copy-of-aicte-pg-question-papers" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">AICTE UG Question Papers</a></li>
+      <li>📙 <a href="https://kessclibrary.wixsite.com/library/copy-of-ug-question-papers" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">AICTE PG Question Papers</a></li>
+    </ul>
+  </div>
+</div>
+<footer>© 2026 KES Updates</footer>
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

@@ -2,782 +2,113 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H7KVLBY669"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H7KVLBY669');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Academic Info | KES Updates</title>
-<meta name="description" content="Academic calendar, fees structure, cutoff lists, unit test countdown and exam reminders for KES students.">
+<meta name="description" content="Academic calendar, fees structure and cutoff list for KES students.">
+
+<!-- OG Meta Tags -->
 <meta property="og:title" content="Academic Info | KES Updates">
-<meta property="og:description" content="Fees structure, cutoff lists, academic calendar, unit test countdown and exam reminders for KES Degree and Junior College.">
+<meta property="og:description" content="Academic calendar, fees structure and cutoff list for KES students.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kesupdatess.github.io/kes-Updatess/academic.html">
 <meta property="og:image" content="https://kesupdatess.github.io/kes-Updatess/preview.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Academic Info | KES Updates">
-<meta name="twitter:description" content="Academic calendar, fees, cutoff, unit test countdown and more for KES students.">
+<meta name="twitter:description" content="Academic calendar, fees structure and cutoff list for KES students.">
+
+<!-- Favicon -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<style>
-/* ===== UNIT TEST COUNTDOWN STYLES ===== */
-.countdown-card {
-  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,250,252,0.95)) !important;
-  border: 1px solid rgba(239,68,68,0.15) !important;
-  overflow: hidden;
-}
-
-body.dark .countdown-card {
-  background: linear-gradient(135deg, rgba(30,41,59,0.9), rgba(15,23,42,0.9)) !important;
-  border: 1px solid rgba(239,68,68,0.15) !important;
-}
-
-.countdown-header {
-  text-align: center;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(239,68,68,0.1);
-}
-
-body.dark .countdown-header {
-  border-bottom-color: rgba(239,68,68,0.15);
-}
-
-.countdown-icon {
-  font-size: 2.2rem;
-  margin-bottom: 6px;
-  display: inline-block;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
-
-.countdown-header h2 {
-  font-size: 1.5rem;
-  margin-bottom: 4px;
-  background: linear-gradient(135deg, #dc2626, #ef4444, #f97316);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-body.dark .countdown-header h2 {
-  background: linear-gradient(135deg, #fca5a5, #f87171, #fb923c);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.countdown-subtitle {
-  color: #64748b;
-  font-size: 0.85rem;
-  font-weight: 500;
-  max-width: 500px;
-  margin: 0 auto;
-  line-height: 1.4;
-}
-
-body.dark .countdown-subtitle {
-  color: #94a3b8;
-}
-
-/* Test Selector */
-.test-selector {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.test-btn {
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 0.85rem;
-  border: 2px solid rgba(239,68,68,0.2);
-  background: rgba(255,255,255,0.8);
-  color: #dc2626;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.test-btn:hover {
-  background: rgba(239,68,68,0.1);
-  transform: translateY(-2px);
-}
-
-.test-btn.active {
-  background: linear-gradient(135deg, #ef4444, #dc2626);
-  color: white;
-  border-color: transparent;
-  box-shadow: 0 4px 15px rgba(239,68,68,0.3);
-}
-
-body.dark .test-btn {
-  background: rgba(30,41,59,0.6);
-  border-color: rgba(239,68,68,0.3);
-  color: #f87171;
-}
-
-body.dark .test-btn.active {
-  background: linear-gradient(135deg, #ef4444, #dc2626);
-  color: white;
-}
-
-/* Countdown Timer */
-.countdown-timer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-bottom: 20px;
-}
-
-.time-box {
-  background: rgba(239,68,68,0.06);
-  border: 2px solid rgba(239,68,68,0.15);
-  border-radius: 20px;
-  padding: 16px 8px;
-  text-align: center;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.time-box::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #ef4444, #f97316);
-  border-radius: 20px 20px 0 0;
-}
-
-.time-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(239,68,68,0.15);
-  border-color: rgba(239,68,68,0.3);
-}
-
-.time-value {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #dc2626;
-  line-height: 1;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.time-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #64748b;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-body.dark .time-box {
-  background: rgba(239,68,68,0.08);
-  border-color: rgba(239,68,68,0.2);
-}
-
-body.dark .time-value {
-  color: #f87171;
-}
-
-body.dark .time-label {
-  color: #94a3b8;
-}
-
-/* Test Info */
-.test-info {
-  background: rgba(239,68,68,0.04);
-  border: 1px solid rgba(239,68,68,0.1);
-  border-radius: 16px;
-  padding: 16px;
-  margin-bottom: 16px;
-}
-
-body.dark .test-info {
-  background: rgba(239,68,68,0.06);
-  border-color: rgba(239,68,68,0.15);
-}
-
-.test-info-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-  font-size: 0.9rem;
-  color: #334155;
-}
-
-.test-info-row:last-child {
-  margin-bottom: 0;
-}
-
-.test-info-icon {
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-
-.test-info-label {
-  font-weight: 600;
-  color: #1e40af;
-}
-
-body.dark .test-info-row {
-  color: #cbd5e1;
-}
-
-body.dark .test-info-label {
-  color: #93c5fd;
-}
-
-/* Subject List */
-.subject-list {
-  list-style: none;
-  margin-top: 12px;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(59,130,246,0.12);
-}
-
-.subject-list li {
-  padding: 12px 16px;
-  font-size: 0.9rem;
-  color: #334155;
-  border-bottom: 1px solid rgba(59,130,246,0.08);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-.subject-list li:last-child {
-  border-bottom: none;
-}
-
-.subject-list li:nth-child(odd) {
-  background: rgba(59,130,246,0.03);
-}
-
-.subject-list li:hover {
-  background: rgba(59,130,246,0.08);
-  transform: translateX(4px);
-}
-
-.subject-icon {
-  font-size: 1.1rem;
-}
-
-.subject-date {
-  margin-left: auto;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #dc2626;
-  background: rgba(239,68,68,0.1);
-  padding: 4px 10px;
-  border-radius: 50px;
-}
-
-body.dark .subject-list li {
-  color: #cbd5e1;
-  border-bottom-color: rgba(255,255,255,0.06);
-}
-
-body.dark .subject-list li:nth-child(odd) {
-  background: rgba(99,102,241,0.05);
-}
-
-body.dark .subject-list li:hover {
-  background: rgba(99,102,241,0.1);
-}
-
-body.dark .subject-date {
-  color: #f87171;
-  background: rgba(239,68,68,0.15);
-}
-
-/* Study Reminder */
-.study-reminder {
-  background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(5,150,105,0.04));
-  border: 1px solid rgba(16,185,129,0.2);
-  border-radius: 16px;
-  padding: 16px;
-  margin-top: 16px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.study-reminder-icon {
-  font-size: 2rem;
-  flex-shrink: 0;
-}
-
-.study-reminder-text {
-  flex: 1;
-}
-
-.study-reminder-text h4 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #059669;
-  margin-bottom: 4px;
-}
-
-.study-reminder-text p {
-  font-size: 0.85rem;
-  color: #475569;
-  margin: 0;
-}
-
-body.dark .study-reminder {
-  background: linear-gradient(135deg, rgba(16,185,129,0.1), rgba(5,150,105,0.06));
-  border-color: rgba(16,185,129,0.25);
-}
-
-body.dark .study-reminder-text h4 {
-  color: #34d399;
-}
-
-body.dark .study-reminder-text p {
-  color: #94a3b8;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .countdown-timer {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-
-  .time-box {
-    padding: 12px 6px;
-  }
-
-  .time-value {
-    font-size: 1.8rem;
-  }
-
-  .time-label {
-    font-size: 0.65rem;
-  }
-
-  .test-selector {
-    gap: 6px;
-  }
-
-  .test-btn {
-    padding: 6px 12px;
-    font-size: 0.78rem;
-  }
-
-  .countdown-header h2 {
-    font-size: 1.3rem;
-  }
-
-  .subject-list li {
-    font-size: 0.85rem;
-    padding: 10px 12px;
-  }
-
-  .subject-date {
-    font-size: 0.7rem;
-    padding: 3px 8px;
-  }
-}
-
-/* Urgent state */
-.countdown-card.urgent .time-box {
-  border-color: rgba(239,68,68,0.4);
-  animation: urgentPulse 1.5s ease-in-out infinite;
-}
-
-@keyframes urgentPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.2); }
-  50% { box-shadow: 0 0 0 8px rgba(239,68,68,0); }
-}
-
-.countdown-card.urgent .time-value {
-  color: #b91c1c;
-}
-
-body.dark .countdown-card.urgent .time-value {
-  color: #ef4444;
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
 <div class="scroll-progress" id="scrollProgress"></div>
+
 <div class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMenu();}" aria-label="Toggle Menu" aria-expanded="false" aria-controls="sidebar" role="button" tabindex="0">☰</div>
+
 <div class="theme-toggle">
   <button id="btn-light" onclick="setTheme('light')" title="Light Mode">☀️</button>
   <button id="btn-dark" onclick="setTheme('dark')" title="Dark Mode">🌙</button>
 </div>
+
 <div id="overlay" onclick="toggleMenu()"></div>
+
 <nav id="sidebar">
-  <a href="index.html" class="btn-blue">🏠 Home</a>
-  <a href="notices.html" class="btn-red">📢 Notices</a>
-  <a href="academic.html" class="btn-green">📚 Academic Info</a>
-  <a href="papers.html" class="btn-purple">📄 Question Papers</a>
-  <a href="erp.html" class="btn-orange">💳 ERP Portal</a>
-  <a href="library.html" class="btn-cyan">📚 Library</a>
-  <a href="attendance.html" class="btn-blue">🧮 Attendance Calculator</a>
-  <a href="college.html" class="btn-orange">🏛️ College Details</a>
-  <a href="student.html" class="btn-green">🧑‍🎓 Student Corner</a>
-  <a href="collab.html" class="btn-green">🤝 Collaboration</a>
-  <a href="about.html" class="btn-purple">ℹ️ About</a>
-  <a href="policy.html" class="btn-red">📄 Policy</a>
+  <a href="notices.html" class="btn-red" onclick="toggleMenu()">📢 Notices</a>
+  <a href="student.html" class="btn-blue" onclick="toggleMenu()">🧑‍🎓 Student Corner</a>
+  <a href="academic.html" class="btn-green" onclick="toggleMenu()">📚 Academic Info</a>
+  <a href="papers.html" class="btn-purple" onclick="toggleMenu()">📄 Question Papers</a>
+  <a href="erp.html" class="btn-orange" onclick="toggleMenu()">💳 ERP Portal</a>
+  <a href="library.html" class="btn-cyan" onclick="toggleMenu()">📚 Library</a>
+  <a href="attendance.html" class="btn-blue" onclick="toggleMenu()">🧮 Smart Attendance Calculator</a>
+  <a href="college-details.html" class="btn-orange" onclick="toggleMenu()">🏛️ College Details</a>
+  <a href="collab.html" class="btn-green" onclick="toggleMenu()">🤝 Collaboration</a>
+  <a href="about.html" class="btn-purple" onclick="toggleMenu()">ℹ️ About</a>
+  <a href="policy.html" class="btn-red" onclick="toggleMenu()">📄 Policy</a>
 </nav>
 
-<header>
-  <div class="logo">🎓</div>
-  <h1>KES Updates</h1>
-  <p>Notices • Student Support • Academic Resources</p>
-  <a class="btn btn-red instagram-btn" href="https://instagram.com/kes_updatess" target="_blank" rel="noopener noreferrer">
-    <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
-      <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-      <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
-    </svg>
-    <span>Follow Instagram</span>
-  </a>
-</header>
-
-<div class="container">
-  <div class="ticker-wrap">
-    <span class="ticker-label">🔴 LIVE</span>
-    <div class="ticker-inner">
-      <span class="ticker-text">
-        📢 Check latest notices on KES Updates &nbsp;|&nbsp;
-        💳 Pay your fees via ERP Portal &nbsp;|&nbsp;
-        📚 Academic Calendar 2026-27 is available &nbsp;|&nbsp;
-        📄 Previous Year Question Papers now available &nbsp;|&nbsp;
-        🤝 Want to collaborate? Email us at kesupdatess@gmail.com &nbsp;|&nbsp;
-        🎓 Welcome to KES Updates — your one-stop student portal!
-      </span>
-    </div>
+<div class="container" style="padding-top:90px;">
+  <div class="home-btn-row">
+    <div class="breadcrumb"><a href="index.html">🏠 Home</a> <span>›</span> <span>Academic Info</span></div>
+    <a href="index.html" class="btn btn-blue home-btn">🏠 Home</a>
   </div>
 
-  <!-- UNIT TEST COUNTDOWN -->
-  <div class="card reveal countdown-card" id="unitTest">
-    <div class="countdown-header">
-      <div class="countdown-icon">⏰</div>
-      <h2>Unit Test Countdown</h2>
-      <p class="countdown-subtitle">Stay prepared! Track your upcoming unit tests and plan your studies accordingly.</p>
-    </div>
-
-    <!-- Test Selector -->
-    <div class="test-selector">
-      <button class="test-btn active" onclick="selectTest(0)">Unit Test 1</button>
-      <button class="test-btn" onclick="selectTest(1)">Unit Test 2</button>
-      <button class="test-btn" onclick="selectTest(2)">Unit Test 3</button>
-      <button class="test-btn" onclick="selectTest(3)">Unit Test 4</button>
-    </div>
-
-    <!-- Countdown Timer -->
-    <div class="countdown-timer" id="countdownTimer">
-      <div class="time-box">
-        <span class="time-value" id="days">00</span>
-        <span class="time-label">Days</span>
-      </div>
-      <div class="time-box">
-        <span class="time-value" id="hours">00</span>
-        <span class="time-label">Hours</span>
-      </div>
-      <div class="time-box">
-        <span class="time-value" id="minutes">00</span>
-        <span class="time-label">Minutes</span>
-      </div>
-      <div class="time-box">
-        <span class="time-value" id="seconds">00</span>
-        <span class="time-label">Seconds</span>
-      </div>
-    </div>
-
-    <!-- Test Info -->
-    <div class="test-info" id="testInfo">
-      <div class="test-info-row">
-        <span class="test-info-icon">📅</span>
-        <span><span class="test-info-label">Date:</span> <span id="testDate">July 15, 2026</span></span>
-      </div>
-      <div class="test-info-row">
-        <span class="test-info-icon">🕘</span>
-        <span><span class="test-info-label">Time:</span> <span id="testTime">9:00 AM - 11:00 AM</span></span>
-      </div>
-      <div class="test-info-row">
-        <span class="test-info-icon">🏫</span>
-        <span><span class="test-info-label">Venue:</span> <span id="testVenue">Main Building - Room 201</span></span>
-      </div>
-      <div class="test-info-row">
-        <span class="test-info-icon">📋</span>
-        <span><span class="test-info-label">Syllabus:</span> <span id="testSyllabus">Chapters 1-5 (All Subjects)</span></span>
-      </div>
-    </div>
-
-    <!-- Subject-wise Schedule -->
-    <h3 style="font-size:1.1rem;color:#1e40af;margin-bottom:10px;font-weight:700;">📚 Subject Schedule</h3>
-    <ul class="subject-list" id="subjectList">
-      <li>
-        <span class="subject-icon">📊</span>
-        <span>Accounts</span>
-        <span class="subject-date">July 15</span>
-      </li>
-      <li>
-        <span class="subject-icon">💰</span>
-        <span>Economics</span>
-        <span class="subject-date">July 16</span>
-      </li>
-      <li>
-        <span class="subject-icon">📈</span>
-        <span>Business Studies</span>
-        <span class="subject-date">July 17</span>
-      </li>
-      <li>
-        <span class="subject-icon">🧮</span>
-        <span>Mathematics</span>
-        <span class="subject-date">July 18</span>
-      </li>
-      <li>
-        <span class="subject-icon">📝</span>
-        <span>English</span>
-        <span class="subject-date">July 19</span>
-      </li>
-    </ul>
-
-    <!-- Study Reminder -->
-    <div class="study-reminder" id="studyReminder">
-      <div class="study-reminder-icon">💡</div>
-      <div class="study-reminder-text">
-        <h4>Study Tip</h4>
-        <p id="studyTip">Start revising chapters 1-3 today. Focus on numerical problems in Accounts and formulas in Economics!</p>
-      </div>
-    </div>
-
-    <!-- Share Countdown -->
-    <div style="text-align:center;margin-top:16px;">
-      <button class="whatsapp-btn" onclick="shareCountdown()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Share Countdown with Friends
-      </button>
-    </div>
+  <div class="page-header">
+    <div class="page-icon">📚</div>
+    <h1 class="page-title">Academic Info</h1>
+    <p class="page-tagline">Academic calendar, fee structures, and cutoff lists — all official documents in one spot.</p>
   </div>
 
-  <!-- Academic Resources -->
-  <div class="card reveal">
+  <div class="card reveal" style="opacity:1;transform:none;">
     <h2>📚 Academic Info</h2>
-    <p>All academic documents including fees, cutoff and calendar updates are available here.</p>
     <a class="link btn-blue" href="https://drive.google.com/file/d/1F9UqN7SbvUJEaWOy7jtvoiu1dNkEpqVX/view" target="_blank" rel="noopener noreferrer">📅 Academic Calendar 2026-27</a>
     <a class="link btn-green" href="https://drive.google.com/file/d/1vYEIClJD7QRGKD0ANY-XlPPUl-h9RN-f/view" target="_blank" rel="noopener noreferrer">🏫 Junior College Fees Structure</a>
     <a class="link btn-purple" href="https://drive.google.com/file/d/1VZeVNJ06mvhjIu6u6YeIpQzjxx2GiduN/view" target="_blank" rel="noopener noreferrer">🎓 Degree College Fees Structure</a>
     <a class="link btn-orange" href="https://drive.google.com/file/d/1QCLLe0cetbMmHujWD_AL95FE70TCJrF5/view" target="_blank" rel="noopener noreferrer">📊 Junior College Cutoff List</a>
+    <p style="margin-top:12px;">All academic documents including fees, cutoff and calendar updates are available here.</p>
   </div>
 
-  <!-- Question Papers -->
-  <div class="card reveal">
-    <h2>📄 Question Papers</h2>
-    <p>Previous year question papers for exam preparation.</p>
-    <a href="papers.html" class="btn btn-purple" style="display:inline-block;">📄 View Question Papers →</a>
-  </div>
-
-  <!-- Exam Preparation Tips -->
-  <div class="card reveal">
-    <h2>🎯 Exam Preparation Tips</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px;">
-      <div style="background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.1);border-radius:16px;padding:16px;text-align:center;">
-        <div style="font-size:2rem;margin-bottom:8px;">📖</div>
-        <h4 style="font-size:0.95rem;color:#1e40af;margin-bottom:4px;">Revise Daily</h4>
-        <p style="font-size:0.8rem;color:#64748b;">2 hours daily revision is better than last-minute cramming</p>
-      </div>
-      <div style="background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.1);border-radius:16px;padding:16px;text-align:center;">
-        <div style="font-size:2rem;margin-bottom:8px;">📝</div>
-        <h4 style="font-size:0.95rem;color:#059669;margin-bottom:4px;">Practice Papers</h4>
-        <p style="font-size:0.8rem;color:#64748b;">Solve at least 3 previous year papers before exam</p>
-      </div>
-      <div style="background:rgba(239,68,68,0.04);border:1px solid rgba(239,68,68,0.1);border-radius:16px;padding:16px;text-align:center;">
-        <div style="font-size:2rem;margin-bottom:8px;">😴</div>
-        <h4 style="font-size:0.95rem;color:#dc2626;margin-bottom:4px;">Sleep Well</h4>
-        <p style="font-size:0.8rem;color:#64748b;">7-8 hours sleep improves memory retention by 40%</p>
-      </div>
-      <div style="background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.1);border-radius:16px;padding:16px;text-align:center;">
-        <div style="font-size:2rem;margin-bottom:8px;">🍎</div>
-        <h4 style="font-size:0.95rem;color:#d97706;margin-bottom:4px;">Eat Healthy</h4>
-        <p style="font-size:0.8rem;color:#64748b;">Avoid junk food during exam week. Eat brain-boosting foods!</p>
-      </div>
+  <div class="related-pages">
+    <h3>You might also need</h3>
+    <div class="related-grid">
+    <a href="papers.html" class="related-card">
+      <span class="related-icon">📄</span>
+      <span class="related-text">
+        <span class="related-label">Explore</span>
+        <span class="related-name">Question Papers</span>
+      </span>
+    </a>
+    <a href="erp.html" class="related-card">
+      <span class="related-icon">💳</span>
+      <span class="related-text">
+        <span class="related-label">Explore</span>
+        <span class="related-name">ERP Portal</span>
+      </span>
+    </a>
     </div>
   </div>
 </div>
 
 <footer>© 2026 KES Updates</footer>
+
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<script src="script.js"></script>
-<script>
-// ===== UNIT TEST DATA =====
-const unitTests = [
-  {
-    name: "Unit Test 1",
-    date: "2026-07-15T09:00:00",
-    time: "9:00 AM - 11:00 AM",
-    venue: "Main Building - Room 201",
-    syllabus: "Chapters 1-5 (All Subjects)",
-    subjects: [
-      { name: "Accounts", icon: "📊", date: "July 15" },
-      { name: "Economics", icon: "💰", date: "July 16" },
-      { name: "Business Studies", icon: "📈", date: "July 17" },
-      { name: "Mathematics", icon: "🧮", date: "July 18" },
-      { name: "English", icon: "📝", date: "July 19" }
-    ],
-    tip: "Start revising chapters 1-3 today. Focus on numerical problems in Accounts and formulas in Economics!"
-  },
-  {
-    name: "Unit Test 2",
-    date: "2026-08-20T09:00:00",
-    time: "9:00 AM - 11:30 AM",
-    venue: "Main Building - Room 202",
-    syllabus: "Chapters 6-10 (All Subjects)",
-    subjects: [
-      { name: "Accounts", icon: "📊", date: "August 20" },
-      { name: "Economics", icon: "💰", date: "August 21" },
-      { name: "Business Studies", icon: "📈", date: "August 22" },
-      { name: "Mathematics", icon: "🧮", date: "August 23" },
-      { name: "English", icon: "📝", date: "August 24" }
-    ],
-    tip: "Focus on theory portions this time. Make short notes for quick revision before exam!"
-  },
-  {
-    name: "Unit Test 3",
-    date: "2026-09-25T09:00:00",
-    time: "9:00 AM - 12:00 PM",
-    venue: "Annex-2 Building - Room 105",
-    syllabus: "Chapters 11-15 (All Subjects)",
-    subjects: [
-      { name: "Accounts", icon: "📊", date: "September 25" },
-      { name: "Economics", icon: "💰", date: "September 26" },
-      { name: "Business Studies", icon: "📈", date: "September 27" },
-      { name: "Mathematics", icon: "🧮", date: "September 28" },
-      { name: "English", icon: "📝", date: "September 29" }
-    ],
-    tip: "This is the toughest unit test. Start preparation 2 weeks early. Focus on practical problems!"
-  },
-  {
-    name: "Unit Test 4",
-    date: "2026-10-30T09:00:00",
-    time: "9:00 AM - 12:00 PM",
-    venue: "Main Building - Room 301",
-    syllabus: "Chapters 16-20 (All Subjects) + Revision",
-    subjects: [
-      { name: "Accounts", icon: "📊", date: "October 30" },
-      { name: "Economics", icon: "💰", date: "October 31" },
-      { name: "Business Studies", icon: "📈", date: "November 1" },
-      { name: "Mathematics", icon: "🧮", date: "November 2" },
-      { name: "English", icon: "📝", date: "November 3" }
-    ],
-    tip: "Final unit test before semester exams! Revise everything from Unit Test 1 to 3. All the best!"
-  }
-];
+<script src="js/main.js"></script>
 
-let currentTestIndex = 0;
-let countdownInterval;
-
-// ===== SELECT TEST =====
-function selectTest(index) {
-  currentTestIndex = index;
-
-  // Update button states
-  document.querySelectorAll('.test-btn').forEach((btn, i) => {
-    btn.classList.toggle('active', i === index);
-  });
-
-  // Update test info
-  const test = unitTests[index];
-  document.getElementById('testDate').textContent = new Date(test.date).toLocaleDateString('en-US', { 
-    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
-  });
-  document.getElementById('testTime').textContent = test.time;
-  document.getElementById('testVenue').textContent = test.venue;
-  document.getElementById('testSyllabus').textContent = test.syllabus;
-  document.getElementById('studyTip').textContent = test.tip;
-
-  // Update subject list
-  const subjectList = document.getElementById('subjectList');
-  subjectList.innerHTML = test.subjects.map(sub => `
-    <li>
-      <span class="subject-icon">${sub.icon}</span>
-      <span>${sub.name}</span>
-      <span class="subject-date">${sub.date}</span>
-    </li>
-  `).join('');
-
-  // Restart countdown
-  startCountdown();
-}
-
-// ===== COUNTDOWN TIMER =====
-function startCountdown() {
-  if (countdownInterval) clearInterval(countdownInterval);
-
-  const testDate = new Date(unitTests[currentTestIndex].date);
-
-  function updateTimer() {
-    const now = new Date();
-    const diff = testDate - now;
-
-    if (diff <= 0) {
-      // Test started!
-      document.getElementById('days').textContent = '00';
-      document.getElementById('hours').textContent = '00';
-      document.getElementById('minutes').textContent = '00';
-      document.getElementById('seconds').textContent = '00';
-      document.querySelector('.countdown-card').classList.remove('urgent');
-      return;
-    }
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-    document.getElementById('days').textContent = String(days).padStart(2, '0');
-    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-
-    // Urgent mode if less than 3 days
-    const card = document.querySelector('.countdown-card');
-    if (days < 3) {
-      card.classList.add('urgent');
-    } else {
-      card.classList.remove('urgent');
-    }
-  }
-
-  updateTimer();
-  countdownInterval = setInterval(updateTimer, 1000);
-}
-
-// ===== SHARE COUNTDOWN =====
-function shareCountdown() {
-  const test = unitTests[currentTestIndex];
-  const days = document.getElementById('days').textContent;
-  const hours = document.getElementById('hours').textContent;
-  const text = `${test.name} is in ${days} days ${hours} hours! 📚\nSyllabus: ${test.syllabus}\n\nTrack all tests on KES Updates:`;
-  const url = `https://wa.me/?text=${encodeURIComponent(text + ' https://kesupdatess.github.io/kes-Updatess/academic.html')}`;
-  window.open(url, '_blank');
-}
-
-// ===== INITIALIZE =====
-window.addEventListener('load', () => {
-  selectTest(0);
-});
-</script>
 </body>
 </html>

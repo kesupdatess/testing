@@ -2,140 +2,177 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H7KVLBY669"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H7KVLBY669');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KES Updates | KES Updates</title>
+<title>KES Updates | Student Portal</title>
 <meta name="description" content="KES Updates - Student portal for notices, academic info, fees, cutoff, question papers, ERP and library services.">
-<meta property="og:title" content="KES Updates">
-<meta property="og:description" content="KES Updates - Student portal for notices, academic info, fees, cutoff, question papers, ERP and library services.">
+
+<!-- OG Meta Tags for WhatsApp/Instagram preview -->
+<meta property="og:title" content="KES Updates | Student Portal">
+<meta property="og:description" content="Notices, fees, cutoff, ERP, library and more — all in one place for KES students.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kesupdatess.github.io/kes-Updatess/">
 <meta property="og:image" content="https://kesupdatess.github.io/kes-Updatess/preview.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="KES Updates">
-<meta name="twitter:description" content="KES Updates - Student portal for notices, academic info, fees, cutoff, question papers, ERP and library services.">
+<meta name="twitter:title" content="KES Updates | Student Portal">
+<meta name="twitter:description" content="Notices, fees, cutoff, ERP, library and more for KES students.">
+
+<!-- Favicon -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+<!-- Scroll Progress Bar -->
 <div class="scroll-progress" id="scrollProgress"></div>
+
 <div class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMenu();}" aria-label="Toggle Menu" aria-expanded="false" aria-controls="sidebar" role="button" tabindex="0">☰</div>
+
+<!-- Floating Light/Dark Toggle -->
 <div class="theme-toggle">
   <button id="btn-light" onclick="setTheme('light')" title="Light Mode">☀️</button>
   <button id="btn-dark" onclick="setTheme('dark')" title="Dark Mode">🌙</button>
 </div>
+
 <div id="overlay" onclick="toggleMenu()"></div>
+
 <nav id="sidebar">
-  <a href="index.html" class="btn-blue">🏠 Home</a>
-  <a href="notices.html" class="btn-red">📢 Notices</a>
-  <a href="academic.html" class="btn-green">📚 Academic Info</a>
-  <a href="papers.html" class="btn-purple">📄 Question Papers</a>
-  <a href="erp.html" class="btn-orange">💳 ERP Portal</a>
-  <a href="library.html" class="btn-cyan">📚 Library</a>
-  <a href="attendance.html" class="btn-blue">🧮 Attendance Calculator</a>
-  <a href="college.html" class="btn-orange">🏛️ College Details</a>
-  <a href="student.html" class="btn-green">🧑‍🎓 Student Corner</a>
-  <a href="collab.html" class="btn-green">🤝 Collaboration</a>
-  <a href="about.html" class="btn-purple">ℹ️ About</a>
-  <a href="policy.html" class="btn-red">📄 Policy</a>
+  <a href="notices.html" class="btn-red" onclick="toggleMenu()">📢 Notices</a>
+  <a href="student.html" class="btn-blue" onclick="toggleMenu()">🧑‍🎓 Student Corner</a>
+  <a href="academic.html" class="btn-green" onclick="toggleMenu()">📚 Academic Info</a>
+  <a href="papers.html" class="btn-purple" onclick="toggleMenu()">📄 Question Papers</a>
+  <a href="erp.html" class="btn-orange" onclick="toggleMenu()">💳 ERP Portal</a>
+  <a href="library.html" class="btn-cyan" onclick="toggleMenu()">📚 Library</a>
+  <a href="attendance.html" class="btn-blue" onclick="toggleMenu()">🧮 Smart Attendance Calculator</a>
+  <a href="college-details.html" class="btn-orange" onclick="toggleMenu()">🏛️ College Details</a>
+  <a href="collab.html" class="btn-green" onclick="toggleMenu()">🤝 Collaboration</a>
+  <a href="about.html" class="btn-purple" onclick="toggleMenu()">ℹ️ About</a>
+  <a href="policy.html" class="btn-red" onclick="toggleMenu()">📄 Policy</a>
 </nav>
+
 <header>
   <div class="logo">🎓</div>
   <h1>KES Updates</h1>
   <p>Notices • Student Support • Academic Resources</p>
   <a class="btn btn-red instagram-btn" href="https://instagram.com/kes_updatess" target="_blank" rel="noopener noreferrer">
-    <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
-      <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-      <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
-    </svg>
-    <span>Follow Instagram</span>
-  </a>
+  <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+    <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+  </svg>
+  <span>Follow Instagram</span>
+</a>
 </header>
 
 <div class="container">
-  <div class="ticker-wrap">
-  <span class="ticker-label">🔴 LIVE</span>
-  <div class="ticker-inner">
-    <span class="ticker-text">
-      📢 Check latest notices on KES Updates &nbsp;|&nbsp;
-      💳 Pay your fees via ERP Portal &nbsp;|&nbsp;
-      📚 Academic Calendar 2026-27 is available &nbsp;|&nbsp;
-      📄 Previous Year Question Papers now available &nbsp;|&nbsp;
-      🤝 Want to collaborate? Email us at kesupdatess@gmail.com &nbsp;|&nbsp;
-      🎓 Welcome to KES Updates — your one-stop student portal!
-    </span>
-  </div>
-</div>
 
-  <!-- Quick Links Grid -->
-  <div class="card reveal">
-    <h2>🚀 Quick Access</h2>
-    <p style="margin-bottom:16px;">Jump directly to the most used student resources:</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;">
-      <a href="notices.html" class="btn btn-red">📢 Notices</a>
-      <a href="academic.html" class="btn btn-green">📚 Academic Info</a>
-      <a href="papers.html" class="btn btn-purple">📄 Question Papers</a>
-      <a href="erp.html" class="btn btn-orange">💳 ERP Portal</a>
-      <a href="library.html" class="btn btn-cyan">📚 Library</a>
-      <a href="attendance.html" class="btn btn-blue">🧮 Attendance</a>
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <span class="ticker-label">🔴 LIVE</span>
+    <div class="ticker-inner">
+      <span class="ticker-text">
+        📢 Check latest notices on KES Updates &nbsp;|&nbsp;
+        💳 Pay your fees via ERP Portal &nbsp;|&nbsp;
+        📚 Academic Calendar 2026-27 is available &nbsp;|&nbsp;
+        📄 Previous Year Question Papers now available &nbsp;|&nbsp;
+        🤝 Want to collaborate? Email us at kesupdatess@gmail.com &nbsp;|&nbsp;
+        🎓 Welcome to KES Updates — your one-stop student portal!
+      </span>
     </div>
   </div>
 
-  <!-- Featured: Notices -->
-  <div class="card reveal">
-    <h2>📢 Latest Notices</h2>
-    <p>Stay updated with the latest announcements from both Degree and Junior College.</p>
+  <!-- NOTICES PREVIEW -->
+  <div class="card reveal" id="notices-preview" style="opacity:1;transform:none;">
+    <h2>📢 Important Notices</h2>
     <a class="link btn-red" href="https://kessc.edu.in/notices/" target="_blank" rel="noopener noreferrer">Degree College Notices</a>
     <a class="link btn-blue" href="https://kesjrsanghvi.com/enotices/" target="_blank" rel="noopener noreferrer">Junior College Notices</a>
-    <a href="notices.html" class="btn btn-blue" style="margin-top:12px;display:inline-block;">View All Notices →</a>
+    <a href="notices.html" class="see-more-link">View all notices →</a>
   </div>
 
-  <!-- Featured: Academic -->
-  <div class="card reveal">
-    <h2>📚 Academic Resources</h2>
-    <p>Access fees structure, cutoff lists, and academic calendar.</p>
-    <a class="link btn-blue" href="https://drive.google.com/file/d/1F9UqN7SbvUJEaWOy7jtvoiu1dNkEpqVX/view" target="_blank" rel="noopener noreferrer">📅 Academic Calendar 2026-27</a>
-    <a class="link btn-green" href="https://drive.google.com/file/d/1vYEIClJD7QRGKD0ANY-XlPPUl-h9RN-f/view" target="_blank" rel="noopener noreferrer">🏫 Junior College Fees</a>
-    <a class="link btn-purple" href="https://drive.google.com/file/d/1VZeVNJ06mvhjIu6u6YeIpQzjxx2GiduN/view" target="_blank" rel="noopener noreferrer">🎓 Degree College Fees</a>
-    <a href="academic.html" class="btn btn-green" style="margin-top:12px;display:inline-block;">View All Academic Info →</a>
-  </div>
-
-  <!-- Featured: Attendance Calculator -->
-  <div class="card reveal attendance-card">
-    <div class="attendance-header">
-      <div class="attendance-icon">🧮</div>
-      <h2>Smart Attendance Calculator</h2>
-      <p class="attendance-subtitle">Calculate your attendance, track progress, and know exactly how many lectures you need</p>
+  <!-- ALL PAGES GRID -->
+  <div class="card reveal" style="opacity:1;transform:none;">
+    <h2>🧭 Explore KES Updates</h2>
+    <div class="pages-grid">
+      <a href="notices.html" class="page-tile">
+        <span class="tile-icon">📢</span>
+        <span class="tile-name">Notices</span>
+        <span class="tile-desc">Latest college notices</span>
+      </a>
+      <a href="student.html" class="page-tile">
+        <span class="tile-icon">🧑‍🎓</span>
+        <span class="tile-name">Student Corner</span>
+        <span class="tile-desc">Memes, doubts & support</span>
+      </a>
+      <a href="academic.html" class="page-tile">
+        <span class="tile-icon">📚</span>
+        <span class="tile-name">Academic Info</span>
+        <span class="tile-desc">Calendar, fees, cutoff</span>
+      </a>
+      <a href="papers.html" class="page-tile">
+        <span class="tile-icon">📄</span>
+        <span class="tile-name">Question Papers</span>
+        <span class="tile-desc">Previous year papers</span>
+      </a>
+      <a href="erp.html" class="page-tile">
+        <span class="tile-icon">💳</span>
+        <span class="tile-name">ERP Portal</span>
+        <span class="tile-desc">Fees, results & forms</span>
+      </a>
+      <a href="library.html" class="page-tile">
+        <span class="tile-icon">📚</span>
+        <span class="tile-name">Library</span>
+        <span class="tile-desc">Catalogue & resources</span>
+      </a>
+      <a href="attendance.html" class="page-tile">
+        <span class="tile-icon">🧮</span>
+        <span class="tile-name">Attendance Calculator</span>
+        <span class="tile-desc">Track your attendance</span>
+      </a>
+      <a href="college-details.html" class="page-tile">
+        <span class="tile-icon">🏛️</span>
+        <span class="tile-name">College Details</span>
+        <span class="tile-desc">Contacts & locations</span>
+      </a>
+      <a href="collab.html" class="page-tile">
+        <span class="tile-icon">🤝</span>
+        <span class="tile-name">Collaboration</span>
+        <span class="tile-desc">Partner with us</span>
+      </a>
+      <a href="about.html" class="page-tile">
+        <span class="tile-icon">ℹ️</span>
+        <span class="tile-name">About</span>
+        <span class="tile-desc">Who we are</span>
+      </a>
+      <a href="policy.html" class="page-tile">
+        <span class="tile-icon">📄</span>
+        <span class="tile-name">Policy</span>
+        <span class="tile-desc">Disclaimer & policy</span>
+      </a>
     </div>
-    <p style="margin-bottom:16px;">Quickly check if your attendance meets the requirement and how many lectures you can miss or need to attend.</p>
-    <a href="attendance.html" class="btn btn-blue" style="display:inline-block;">🧮 Open Attendance Calculator →</a>
   </div>
 
-  <!-- Featured: Student Corner -->
-  <div class="card reveal">
-    <h2>🧑‍🎓 Student Corner</h2>
-    <p>Submit memes, ask doubts, or report issues in college.</p>
-    <a class="link btn-green" href="https://forms.gle/USmraK6T7EqH7UU9A" target="_blank" rel="noopener noreferrer">😂 Submit Meme</a>
-    <a class="link btn-purple" href="mailto:kesupdatess@gmail.com?subject=Ask%20Doubt">❓ Ask Doubt / Support</a>
-    <a class="report-btn btn-red" href="https://docs.google.com/forms/d/e/1FAIpQLSdpkELaLHjghZzWYR6EPYotuRvRDa3yQq3r5y2EHkRqrQOG8g/viewform" target="_blank" rel="noopener noreferrer">🚨 FACING ANY ISSUE IN COLLEGE? TELL US!</a>
-    <a href="student.html" class="btn btn-green" style="margin-top:12px;display:inline-block;">Visit Student Corner →</a>
-  </div>
-
-  <!-- WhatsApp Share -->
-  <div class="card reveal">
-    <h2>📲 Share KES Updates</h2>
-    <p>Help your classmates discover this portal by sharing on WhatsApp!</p>
-    <a class="whatsapp-btn" href="https://wa.me/?text=Check%20out%20KES%20Updates%20for%20latest%20notices%3A%20https%3A%2F%2Fkesupdatess.github.io%2Fkes-Updatess%2F" target="_blank" rel="noopener noreferrer">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Share on WhatsApp
-    </a>
-  </div>
 </div>
+
 <footer>© 2026 KES Updates</footer>
+
+<!-- Back to Top -->
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-<script src="script.js"></script>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>

@@ -2,76 +2,79 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H7KVLBY669"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H7KVLBY669');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Policy | KES Updates</title>
-<meta name="description" content="Public Disclaimer & Policy Notice for KES Updates.">
+<meta name="description" content="Public disclaimer and policy notice for KES Updates.">
+
+<!-- OG Meta Tags -->
 <meta property="og:title" content="Policy | KES Updates">
-<meta property="og:description" content="Public disclaimer and policy notice for KES Updates student portal.">
+<meta property="og:description" content="Public disclaimer and policy notice for KES Updates.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://kesupdatess.github.io/kes-Updatess/">
+<meta property="og:url" content="https://kesupdatess.github.io/kes-Updatess/policy.html">
 <meta property="og:image" content="https://kesupdatess.github.io/kes-Updatess/preview.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Policy | KES Updates">
-<meta name="twitter:description" content="Public disclaimer and policy notice for KES Updates student portal.">
+<meta name="twitter:description" content="Public disclaimer and policy notice for KES Updates.">
+
+<!-- Favicon -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
 <div class="scroll-progress" id="scrollProgress"></div>
+
 <div class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMenu();}" aria-label="Toggle Menu" aria-expanded="false" aria-controls="sidebar" role="button" tabindex="0">☰</div>
+
 <div class="theme-toggle">
   <button id="btn-light" onclick="setTheme('light')" title="Light Mode">☀️</button>
   <button id="btn-dark" onclick="setTheme('dark')" title="Dark Mode">🌙</button>
 </div>
+
 <div id="overlay" onclick="toggleMenu()"></div>
+
 <nav id="sidebar">
-  <a href="index.html" class="btn-blue">🏠 Home</a>
-  <a href="notices.html" class="btn-red">📢 Notices</a>
-  <a href="academic.html" class="btn-green">📚 Academic Info</a>
-  <a href="papers.html" class="btn-purple">📄 Question Papers</a>
-  <a href="erp.html" class="btn-orange">💳 ERP Portal</a>
-  <a href="library.html" class="btn-cyan">📚 Library</a>
-  <a href="attendance.html" class="btn-blue">🧮 Attendance Calculator</a>
-  <a href="college.html" class="btn-orange">🏛️ College Details</a>
-  <a href="student.html" class="btn-green">🧑‍🎓 Student Corner</a>
-  <a href="collab.html" class="btn-green">🤝 Collaboration</a>
-  <a href="about.html" class="btn-purple">ℹ️ About</a>
-  <a href="policy.html" class="btn-red">📄 Policy</a>
+  <a href="notices.html" class="btn-red" onclick="toggleMenu()">📢 Notices</a>
+  <a href="student.html" class="btn-blue" onclick="toggleMenu()">🧑‍🎓 Student Corner</a>
+  <a href="academic.html" class="btn-green" onclick="toggleMenu()">📚 Academic Info</a>
+  <a href="papers.html" class="btn-purple" onclick="toggleMenu()">📄 Question Papers</a>
+  <a href="erp.html" class="btn-orange" onclick="toggleMenu()">💳 ERP Portal</a>
+  <a href="library.html" class="btn-cyan" onclick="toggleMenu()">📚 Library</a>
+  <a href="attendance.html" class="btn-blue" onclick="toggleMenu()">🧮 Smart Attendance Calculator</a>
+  <a href="college-details.html" class="btn-orange" onclick="toggleMenu()">🏛️ College Details</a>
+  <a href="collab.html" class="btn-green" onclick="toggleMenu()">🤝 Collaboration</a>
+  <a href="about.html" class="btn-purple" onclick="toggleMenu()">ℹ️ About</a>
+  <a href="policy.html" class="btn-red" onclick="toggleMenu()">📄 Policy</a>
 </nav>
-<header>
-  <div class="logo">🎓</div>
-  <h1>KES Updates</h1>
-  <p>Notices • Student Support • Academic Resources</p>
-  <a class="btn btn-red instagram-btn" href="https://instagram.com/kes_updatess" target="_blank" rel="noopener noreferrer">
-    <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
-      <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-      <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
-    </svg>
-    <span>Follow Instagram</span>
-  </a>
-</header>
 
-<div class="container">
-  <div class="ticker-wrap">
-  <span class="ticker-label">🔴 LIVE</span>
-  <div class="ticker-inner">
-    <span class="ticker-text">
-      📢 Check latest notices on KES Updates &nbsp;|&nbsp;
-      💳 Pay your fees via ERP Portal &nbsp;|&nbsp;
-      📚 Academic Calendar 2026-27 is available &nbsp;|&nbsp;
-      📄 Previous Year Question Papers now available &nbsp;|&nbsp;
-      🤝 Want to collaborate? Email us at kesupdatess@gmail.com &nbsp;|&nbsp;
-      🎓 Welcome to KES Updates — your one-stop student portal!
-    </span>
+<div class="container" style="padding-top:90px;">
+  <div class="home-btn-row">
+    <div class="breadcrumb"><a href="index.html">🏠 Home</a> <span>›</span> <span>Policy</span></div>
+    <a href="index.html" class="btn btn-blue home-btn">🏠 Home</a>
   </div>
-</div>
 
-  <div class="card reveal">
-    <h2>📄 Public Disclaimer & Policy Notice</h2>
+  <div class="page-header">
+    <div class="page-icon">📄</div>
+    <h1 class="page-title">Policy</h1>
+    <p class="page-tagline">Public disclaimer and policy notice, issued in the interest of transparency.</p>
+  </div>
+
+  <div class="card reveal" style="opacity:1;transform:none;">
     <p>Issued in the interest of transparency and legality, KES Updates operates under the following guidelines:</p>
     <ol style="margin-left:20px;margin-top:12px;margin-bottom:12px;">
       <li><strong>Independent Platform:</strong> KES Updates is a student-managed page and not an official body; references to the college are for identification only.</li>
@@ -82,9 +85,33 @@
     </ol>
     <a class="btn-purple" href="https://www.instagram.com/p/DSUYS6ujFoW/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:10px 24px;border-radius:50px;text-decoration:none;margin-top:10px;color:white;">📜 Read the full KES Updates Policy</a>
   </div>
+
+  <div class="related-pages">
+    <h3>You might also need</h3>
+    <div class="related-grid">
+    <a href="about.html" class="related-card">
+      <span class="related-icon">ℹ️</span>
+      <span class="related-text">
+        <span class="related-label">Explore</span>
+        <span class="related-name">About</span>
+      </span>
+    </a>
+    <a href="notices.html" class="related-card">
+      <span class="related-icon">📢</span>
+      <span class="related-text">
+        <span class="related-label">Explore</span>
+        <span class="related-name">Notices</span>
+      </span>
+    </a>
+    </div>
+  </div>
 </div>
+
 <footer>© 2026 KES Updates</footer>
+
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-<script src="script.js"></script>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
